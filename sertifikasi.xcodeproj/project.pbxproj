@@ -24,6 +24,15 @@
 		F7341294294EB22C00157807 /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F734128A294EB22C00157807 /* Transaction+CoreDataClass.swift */; };
 		F7341295294EB22C00157807 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F734128B294EB22C00157807 /* Transaction+CoreDataProperties.swift */; };
 		F7341298294EB26C00157807 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7341297294EB26C00157807 /* CoreDataController.swift */; };
+		F734129B294EBCAD00157807 /* BookStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F734129A294EBCAD00157807 /* BookStatus.swift */; };
+		F734129E294EBE5700157807 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F734129D294EBE5700157807 /* HomeView.swift */; };
+		F73412A1294EBF4700157807 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412A0294EBF4700157807 /* LoginView.swift */; };
+		F73412A3294EC00C00157807 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412A2294EC00C00157807 /* LoginViewModel.swift */; };
+		F73412A5294EC38A00157807 /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412A4294EC38A00157807 /* UIExtension.swift */; };
+		F73412A7294EC49D00157807 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412A6294EC49D00157807 /* Background.swift */; };
+		F73412AB294EC54300157807 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412AA294EC54300157807 /* CollectionView.swift */; };
+		F73412AE294ED0D400157807 /* BookCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412AD294ED0D400157807 /* BookCard.swift */; };
+		F73412B0294ED31000157807 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412AF294ED31000157807 /* CollectionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +54,15 @@
 		F734128A294EB22C00157807 /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F734128B294EB22C00157807 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F7341297294EB26C00157807 /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
+		F734129A294EBCAD00157807 /* BookStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStatus.swift; sourceTree = "<group>"; };
+		F734129D294EBE5700157807 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F73412A0294EBF4700157807 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F73412A2294EC00C00157807 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		F73412A4294EC38A00157807 /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
+		F73412A6294EC49D00157807 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		F73412AA294EC54300157807 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		F73412AD294ED0D400157807 /* BookCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCard.swift; sourceTree = "<group>"; };
+		F73412AF294ED31000157807 /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +95,15 @@
 		F7341256294EA04800157807 /* sertifikasi */ = {
 			isa = PBXGroup;
 			children = (
+				F734129F294EBE5D00157807 /* ViewModel */,
+				F734129C294EBE3600157807 /* View */,
 				F7341267294EA96E00157807 /* Services */,
 				F7341257294EA04800157807 /* sertifikasiApp.swift */,
 				F7341259294EA04800157807 /* ContentView.swift */,
 				F734125B294EA04900157807 /* Assets.xcassets */,
 				F734125D294EA04900157807 /* Preview Content */,
 				F734126B294EAA3000157807 /* LibraryDataModel.xcdatamodeld */,
+				F73412A4294EC38A00157807 /* UIExtension.swift */,
 			);
 			path = sertifikasi;
 			sourceTree = "<group>";
@@ -98,6 +119,7 @@
 		F7341267294EA96E00157807 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F7341299294EBC9F00157807 /* Model */,
 				F7341296294EB23300157807 /* Data Model */,
 				F7341265294EA96800157807 /* PersistenceController.swift */,
 				F7341297294EB26C00157807 /* CoreDataController.swift */,
@@ -120,6 +142,43 @@
 				F734128B294EB22C00157807 /* Transaction+CoreDataProperties.swift */,
 			);
 			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		F7341299294EBC9F00157807 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F734129A294EBCAD00157807 /* BookStatus.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F734129C294EBE3600157807 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F73412AC294ED0B500157807 /* Reusable */,
+				F734129D294EBE5700157807 /* HomeView.swift */,
+				F73412A0294EBF4700157807 /* LoginView.swift */,
+				F73412A6294EC49D00157807 /* Background.swift */,
+				F73412AA294EC54300157807 /* CollectionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F734129F294EBE5D00157807 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F73412A2294EC00C00157807 /* LoginViewModel.swift */,
+				F73412AF294ED31000157807 /* CollectionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F73412AC294ED0B500157807 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				F73412AD294ED0D400157807 /* BookCard.swift */,
+			);
+			path = Reusable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,17 +254,26 @@
 				F734128C294EB22C00157807 /* Book+CoreDataClass.swift in Sources */,
 				F734128E294EB22C00157807 /* Member+CoreDataClass.swift in Sources */,
 				F7341298294EB26C00157807 /* CoreDataController.swift in Sources */,
+				F73412A5294EC38A00157807 /* UIExtension.swift in Sources */,
 				F7341293294EB22C00157807 /* User+CoreDataProperties.swift in Sources */,
 				F734125A294EA04800157807 /* ContentView.swift in Sources */,
+				F734129E294EBE5700157807 /* HomeView.swift in Sources */,
 				F734128D294EB22C00157807 /* Book+CoreDataProperties.swift in Sources */,
+				F73412A7294EC49D00157807 /* Background.swift in Sources */,
 				F734126D294EAA3000157807 /* LibraryDataModel.xcdatamodeld in Sources */,
 				F7341291294EB22C00157807 /* TransactionDetail+CoreDataProperties.swift in Sources */,
 				F734128F294EB22C00157807 /* Member+CoreDataProperties.swift in Sources */,
+				F73412B0294ED31000157807 /* CollectionViewModel.swift in Sources */,
 				F7341295294EB22C00157807 /* Transaction+CoreDataProperties.swift in Sources */,
+				F734129B294EBCAD00157807 /* BookStatus.swift in Sources */,
+				F73412A1294EBF4700157807 /* LoginView.swift in Sources */,
 				F7341258294EA04800157807 /* sertifikasiApp.swift in Sources */,
 				F7341294294EB22C00157807 /* Transaction+CoreDataClass.swift in Sources */,
 				F7341292294EB22C00157807 /* User+CoreDataClass.swift in Sources */,
 				F7341290294EB22C00157807 /* TransactionDetail+CoreDataClass.swift in Sources */,
+				F73412A3294EC00C00157807 /* LoginViewModel.swift in Sources */,
+				F73412AE294ED0D400157807 /* BookCard.swift in Sources */,
+				F73412AB294EC54300157807 /* CollectionView.swift in Sources */,
 				F7341266294EA96800157807 /* PersistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

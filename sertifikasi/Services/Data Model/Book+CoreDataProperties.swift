@@ -45,5 +45,16 @@ extension Book {
 }
 
 extension Book : Identifiable {
-
+    var wrappedStatus : BookStatus {
+        get {
+            return BookStatus(rawValue: self.status)!
+        }
+        set {
+            self.status = newValue.rawValue
+        }
+    }
+    
+    var wrappedTitle : String {
+        return title ?? "No Title Available"
+    }
 }

@@ -117,4 +117,13 @@ class CoreDataController {
             print("Failed to delete data")
         }
     }
+    
+    func save() {
+        do {
+            try context.save()
+        } catch {
+            let error = error as NSError
+            fatalError("Unresolved Error \(error)")
+        }
+    }
 }
