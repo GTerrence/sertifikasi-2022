@@ -8,7 +8,6 @@
                 <entry key="key" value="value"/>
             </userInfo>
         </attribute>
-        <attribute name="published_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="publisher" optional="YES" attributeType="String"/>
         <attribute name="status" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
@@ -18,7 +17,6 @@
         <attribute name="delete" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="start_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="member" inverseEntity="Transaction"/>
     </entity>
     <entity name="Transaction" representedClassName="Transaction" syncable="YES">

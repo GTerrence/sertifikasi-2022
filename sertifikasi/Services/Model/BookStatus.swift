@@ -7,7 +7,16 @@
 
 import Foundation
 
-enum BookStatus : Int16 {
+enum BookStatus : Int16, CaseIterable{
     case available = 1
     case borrowed = 0
+    
+    var displayedValue : String {
+        switch self {
+        case .available:
+            return "Available"
+        case .borrowed:
+            return "Borrowed"
+        }
+    }
 }

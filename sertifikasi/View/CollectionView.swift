@@ -12,27 +12,31 @@ struct CollectionView: View {
     @StateObject var viewModel : CollectionViewModel = CollectionViewModel()
     
     var body: some View {
-        ScrollView {
-            VStack{
-                ForEach((0..<viewModel.books.books.count / 2 + 1), id: \.self) { i in
-                    HStack{
-                        BookCard(title: viewModel.books.books[i * 2].wrappedTitle)
-                        if viewModel.books.books.count > i * 2 + 1 {
-                            BookCard(title: viewModel.books.books[i * 2 + 1].wrappedTitle)
-                        } else {
-                            Spacer()
+//        NavigationView{
+            ScrollView {
+                VStack{
+                    ForEach((0..<viewModel.books.books.count / 2 + 1), id: \.self) { i in
+                        HStack{
+                            BookCard(title: viewModel.books.books[i * 2].wrappedTitle)
+                            
+                            if viewModel.books.books.count > i * 2 + 1 {
+                                BookCard(title: viewModel.books.books[i * 2 + 1].wrappedTitle)
+                            } else {
+                                Spacer()
+                            }
                         }
                     }
                 }
             }
-        }.onAppear() {
+//        }
+        .onAppear() {
             viewModel.books.getNewestBooks()
         }
     }
 }
 
-struct CollectionView_Previews: PreviewProvider {
-    static var previews: some View {
-        CollectionView()
-    }
-}
+//struct CollectionView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CollectionView()
+//    }
+//}

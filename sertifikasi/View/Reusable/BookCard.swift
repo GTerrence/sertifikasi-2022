@@ -12,15 +12,17 @@ struct BookCard: View {
     var title : String
     
     var body: some View {
-        ZStack{
-            Rectangle()
-                .foregroundColor(.clear)
-                .frame(height: 200)
-            VStack{
-                Image(systemName: "chevron.right")
-                    .foregroundColor(Color.gray)
-                    .frame(height : 150)
-                Text(title)
+        NavigationLink(destination: BookDetailView()) {
+            ZStack{
+                Rectangle()
+                    .foregroundColor(.clear)
+                    .frame(height: 200)
+                VStack{
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(Color.gray)
+                        .frame(height : 150)
+                    Text(title)
+                }
             }
         }
         .background(.white)

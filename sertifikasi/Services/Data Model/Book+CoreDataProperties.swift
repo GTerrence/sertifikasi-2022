@@ -19,7 +19,6 @@ extension Book {
     @NSManaged public var author: String?
     @NSManaged public var delete: Bool
     @NSManaged public var id: String?
-    @NSManaged public var published_date: Date?
     @NSManaged public var publisher: String?
     @NSManaged public var status: Int16
     @NSManaged public var title: String?

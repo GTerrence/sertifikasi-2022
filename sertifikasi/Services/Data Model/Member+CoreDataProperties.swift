@@ -19,7 +19,6 @@ extension Member {
     @NSManaged public var delete: Bool
     @NSManaged public var id: String?
     @NSManaged public var name: String?
-    @NSManaged public var start_date: Date?
     @NSManaged public var transactions: NSSet?
 
 }
