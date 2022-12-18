@@ -10,8 +10,10 @@ import SwiftUI
 struct LoginView: View {
     
     @ObservedObject var viewModel = LoginViewModel()
+    @State var isHomeViewActive : Bool = false
     
     var body: some View {
+        NavigationView{
             VStack {
                 HStack {
                     Text("Name")
@@ -23,16 +25,20 @@ struct LoginView: View {
                 }
                 Spacer()
                     .frame(height : 20)
-                Button("Login") {
-                    viewModel.login()
+                NavigationLink(destination: HomeView(), isActive: $isHomeViewActive) {
+                    Button("Login") {
+                        if viewModel.login() {
+                            isHomeViewActive = true
+                        }
+                    }
                 }
                 Spacer()
                     .frame(height : 20)
-                Button("Enter without login") {
-                    
+                NavigationLink(destination: HomeView()) {
+                    Text("Enter Without Login")
                 }
             }
-        
+        }
     }
 }
 

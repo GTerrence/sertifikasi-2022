@@ -30,9 +30,11 @@
 		F73412A3294EC00C00157807 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412A2294EC00C00157807 /* LoginViewModel.swift */; };
 		F73412A5294EC38A00157807 /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412A4294EC38A00157807 /* UIExtension.swift */; };
 		F73412A7294EC49D00157807 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412A6294EC49D00157807 /* Background.swift */; };
-		F73412AB294EC54300157807 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412AA294EC54300157807 /* CollectionView.swift */; };
 		F73412AE294ED0D400157807 /* BookCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412AD294ED0D400157807 /* BookCard.swift */; };
 		F73412B0294ED31000157807 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412AF294ED31000157807 /* CollectionViewModel.swift */; };
+		F73412B3294ED3EF00157807 /* BookCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412B2294ED3EF00157807 /* BookCollection.swift */; };
+		F73412B5294F0F6400157807 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412B4294F0F6400157807 /* ViewState.swift */; };
+		F73412B7294F167100157807 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412B6294F167100157807 /* CollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,9 +62,11 @@
 		F73412A2294EC00C00157807 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		F73412A4294EC38A00157807 /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
 		F73412A6294EC49D00157807 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
-		F73412AA294EC54300157807 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		F73412AD294ED0D400157807 /* BookCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCard.swift; sourceTree = "<group>"; };
 		F73412AF294ED31000157807 /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
+		F73412B2294ED3EF00157807 /* BookCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollection.swift; sourceTree = "<group>"; };
+		F73412B4294F0F6400157807 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		F73412B6294F167100157807 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 		F7341256294EA04800157807 /* sertifikasi */ = {
 			isa = PBXGroup;
 			children = (
+				F73412B1294ED3E100157807 /* Model */,
 				F734129F294EBE5D00157807 /* ViewModel */,
 				F734129C294EBE3600157807 /* View */,
 				F7341267294EA96E00157807 /* Services */,
@@ -159,7 +164,7 @@
 				F734129D294EBE5700157807 /* HomeView.swift */,
 				F73412A0294EBF4700157807 /* LoginView.swift */,
 				F73412A6294EC49D00157807 /* Background.swift */,
-				F73412AA294EC54300157807 /* CollectionView.swift */,
+				F73412B6294F167100157807 /* CollectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,6 +184,15 @@
 				F73412AD294ED0D400157807 /* BookCard.swift */,
 			);
 			path = Reusable;
+			sourceTree = "<group>";
+		};
+		F73412B1294ED3E100157807 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F73412B2294ED3EF00157807 /* BookCollection.swift */,
+				F73412B4294F0F6400157807 /* ViewState.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,19 +275,21 @@
 				F734128D294EB22C00157807 /* Book+CoreDataProperties.swift in Sources */,
 				F73412A7294EC49D00157807 /* Background.swift in Sources */,
 				F734126D294EAA3000157807 /* LibraryDataModel.xcdatamodeld in Sources */,
+				F73412B5294F0F6400157807 /* ViewState.swift in Sources */,
 				F7341291294EB22C00157807 /* TransactionDetail+CoreDataProperties.swift in Sources */,
 				F734128F294EB22C00157807 /* Member+CoreDataProperties.swift in Sources */,
 				F73412B0294ED31000157807 /* CollectionViewModel.swift in Sources */,
 				F7341295294EB22C00157807 /* Transaction+CoreDataProperties.swift in Sources */,
+				F73412B3294ED3EF00157807 /* BookCollection.swift in Sources */,
 				F734129B294EBCAD00157807 /* BookStatus.swift in Sources */,
 				F73412A1294EBF4700157807 /* LoginView.swift in Sources */,
+				F73412B7294F167100157807 /* CollectionView.swift in Sources */,
 				F7341258294EA04800157807 /* sertifikasiApp.swift in Sources */,
 				F7341294294EB22C00157807 /* Transaction+CoreDataClass.swift in Sources */,
 				F7341292294EB22C00157807 /* User+CoreDataClass.swift in Sources */,
 				F7341290294EB22C00157807 /* TransactionDetail+CoreDataClass.swift in Sources */,
 				F73412A3294EC00C00157807 /* LoginViewModel.swift in Sources */,
 				F73412AE294ED0D400157807 /* BookCard.swift in Sources */,
-				F73412AB294EC54300157807 /* CollectionView.swift in Sources */,
 				F7341266294EA96800157807 /* PersistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

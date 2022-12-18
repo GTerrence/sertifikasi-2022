@@ -8,5 +8,9 @@
 import Foundation
 
 class CollectionViewModel : ObservableObject {
+    @Published var books : BookCollection = BookCollection()
     
+    init() {
+        books.getNewestBooks()
+    }
 }

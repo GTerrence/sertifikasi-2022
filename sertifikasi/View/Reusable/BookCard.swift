@@ -15,18 +15,18 @@ struct BookCard: View {
         ZStack{
             Rectangle()
                 .foregroundColor(.clear)
-                .frame(height: 50)
-            HStack{
-                Text(title)
-                Spacer()
+                .frame(height: 200)
+            VStack{
                 Image(systemName: "chevron.right")
-                    .padding(.trailing, 15)
                     .foregroundColor(Color.gray)
+                    .frame(height : 150)
+                Text(title)
             }
         }
         .background(.white)
         .cornerRadius(13)
-        .frame(width: UIScreen.main.bounds.width - 50)
+        .frame(width: UIScreen.main.bounds.width / 2 - 20)
+        .padding(.horizontal, 10)
         .shadow(color: Color.gray.opacity(0.275), radius: 8, x: 2, y: 4)
     }
 }

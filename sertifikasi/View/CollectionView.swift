@@ -8,8 +8,26 @@
 import SwiftUI
 
 struct CollectionView: View {
+    
+    @StateObject var viewModel : CollectionViewModel = CollectionViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            VStack{
+                ForEach((0..<viewModel.books.books.count / 2 + 1), id: \.self) { i in
+                    HStack{
+                        BookCard(title: viewModel.books.books[i * 2].wrappedTitle)
+                        if viewModel.books.books.count > i * 2 + 1 {
+                            BookCard(title: viewModel.books.books[i * 2 + 1].wrappedTitle)
+                        } else {
+                            Spacer()
+                        }
+                    }
+                }
+            }
+        }.onAppear() {
+            viewModel.books.getNewestBooks()
+        }
     }
 }
 
