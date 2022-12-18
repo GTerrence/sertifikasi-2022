@@ -11,6 +11,19 @@
 		F734125A294EA04800157807 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7341259294EA04800157807 /* ContentView.swift */; };
 		F734125C294EA04900157807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F734125B294EA04900157807 /* Assets.xcassets */; };
 		F734125F294EA04900157807 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F734125E294EA04900157807 /* Preview Assets.xcassets */; };
+		F7341266294EA96800157807 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7341265294EA96800157807 /* PersistenceController.swift */; };
+		F734126D294EAA3000157807 /* LibraryDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F734126B294EAA3000157807 /* LibraryDataModel.xcdatamodeld */; };
+		F734128C294EB22C00157807 /* Book+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7341282294EB22C00157807 /* Book+CoreDataClass.swift */; };
+		F734128D294EB22C00157807 /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7341283294EB22C00157807 /* Book+CoreDataProperties.swift */; };
+		F734128E294EB22C00157807 /* Member+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7341284294EB22C00157807 /* Member+CoreDataClass.swift */; };
+		F734128F294EB22C00157807 /* Member+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7341285294EB22C00157807 /* Member+CoreDataProperties.swift */; };
+		F7341290294EB22C00157807 /* TransactionDetail+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7341286294EB22C00157807 /* TransactionDetail+CoreDataClass.swift */; };
+		F7341291294EB22C00157807 /* TransactionDetail+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7341287294EB22C00157807 /* TransactionDetail+CoreDataProperties.swift */; };
+		F7341292294EB22C00157807 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7341288294EB22C00157807 /* User+CoreDataClass.swift */; };
+		F7341293294EB22C00157807 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7341289294EB22C00157807 /* User+CoreDataProperties.swift */; };
+		F7341294294EB22C00157807 /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F734128A294EB22C00157807 /* Transaction+CoreDataClass.swift */; };
+		F7341295294EB22C00157807 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F734128B294EB22C00157807 /* Transaction+CoreDataProperties.swift */; };
+		F7341298294EB26C00157807 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7341297294EB26C00157807 /* CoreDataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +32,19 @@
 		F7341259294EA04800157807 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F734125B294EA04900157807 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F734125E294EA04900157807 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F7341265294EA96800157807 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		F734126C294EAA3000157807 /* LibraryDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LibraryDataModel.xcdatamodel; sourceTree = "<group>"; };
+		F7341282294EB22C00157807 /* Book+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F7341283294EB22C00157807 /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F7341284294EB22C00157807 /* Member+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Member+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F7341285294EB22C00157807 /* Member+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Member+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F7341286294EB22C00157807 /* TransactionDetail+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransactionDetail+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F7341287294EB22C00157807 /* TransactionDetail+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransactionDetail+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F7341288294EB22C00157807 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F7341289294EB22C00157807 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F734128A294EB22C00157807 /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F734128B294EB22C00157807 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F7341297294EB26C00157807 /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +77,12 @@
 		F7341256294EA04800157807 /* sertifikasi */ = {
 			isa = PBXGroup;
 			children = (
+				F7341267294EA96E00157807 /* Services */,
 				F7341257294EA04800157807 /* sertifikasiApp.swift */,
 				F7341259294EA04800157807 /* ContentView.swift */,
 				F734125B294EA04900157807 /* Assets.xcassets */,
 				F734125D294EA04900157807 /* Preview Content */,
+				F734126B294EAA3000157807 /* LibraryDataModel.xcdatamodeld */,
 			);
 			path = sertifikasi;
 			sourceTree = "<group>";
@@ -65,6 +93,33 @@
 				F734125E294EA04900157807 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F7341267294EA96E00157807 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F7341296294EB23300157807 /* Data Model */,
+				F7341265294EA96800157807 /* PersistenceController.swift */,
+				F7341297294EB26C00157807 /* CoreDataController.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F7341296294EB23300157807 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				F7341282294EB22C00157807 /* Book+CoreDataClass.swift */,
+				F7341283294EB22C00157807 /* Book+CoreDataProperties.swift */,
+				F7341284294EB22C00157807 /* Member+CoreDataClass.swift */,
+				F7341285294EB22C00157807 /* Member+CoreDataProperties.swift */,
+				F7341286294EB22C00157807 /* TransactionDetail+CoreDataClass.swift */,
+				F7341287294EB22C00157807 /* TransactionDetail+CoreDataProperties.swift */,
+				F7341288294EB22C00157807 /* User+CoreDataClass.swift */,
+				F7341289294EB22C00157807 /* User+CoreDataProperties.swift */,
+				F734128A294EB22C00157807 /* Transaction+CoreDataClass.swift */,
+				F734128B294EB22C00157807 /* Transaction+CoreDataProperties.swift */,
+			);
+			path = "Data Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +192,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F734128C294EB22C00157807 /* Book+CoreDataClass.swift in Sources */,
+				F734128E294EB22C00157807 /* Member+CoreDataClass.swift in Sources */,
+				F7341298294EB26C00157807 /* CoreDataController.swift in Sources */,
+				F7341293294EB22C00157807 /* User+CoreDataProperties.swift in Sources */,
 				F734125A294EA04800157807 /* ContentView.swift in Sources */,
+				F734128D294EB22C00157807 /* Book+CoreDataProperties.swift in Sources */,
+				F734126D294EAA3000157807 /* LibraryDataModel.xcdatamodeld in Sources */,
+				F7341291294EB22C00157807 /* TransactionDetail+CoreDataProperties.swift in Sources */,
+				F734128F294EB22C00157807 /* Member+CoreDataProperties.swift in Sources */,
+				F7341295294EB22C00157807 /* Transaction+CoreDataProperties.swift in Sources */,
 				F7341258294EA04800157807 /* sertifikasiApp.swift in Sources */,
+				F7341294294EB22C00157807 /* Transaction+CoreDataClass.swift in Sources */,
+				F7341292294EB22C00157807 /* User+CoreDataClass.swift in Sources */,
+				F7341290294EB22C00157807 /* TransactionDetail+CoreDataClass.swift in Sources */,
+				F7341266294EA96800157807 /* PersistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +407,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F734126B294EAA3000157807 /* LibraryDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F734126C294EAA3000157807 /* LibraryDataModel.xcdatamodel */,
+			);
+			currentVersion = F734126C294EAA3000157807 /* LibraryDataModel.xcdatamodel */;
+			path = LibraryDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F734124C294EA04800157807 /* Project object */;
 }
