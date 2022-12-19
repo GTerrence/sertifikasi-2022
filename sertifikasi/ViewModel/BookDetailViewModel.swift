@@ -44,7 +44,7 @@ class BookDetailViewModel : ObservableObject {
             transaction.id = UUID().uuidString
             transaction.book_id = self.bookID!
             transaction.transaction_date = Date()
-            transaction.user_id = UUID().uuidString
+            transaction.user_id = GlobalObject.shared.userID
             transaction.delete = false
             
             guard let book = CoreDataController.controller.selectOneWhereCoreData(entityName: "Book", toPredicate: "id", predicateValue: self.bookID!).first as? Book else {

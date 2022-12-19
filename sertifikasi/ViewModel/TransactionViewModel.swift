@@ -16,12 +16,16 @@ class TransactionViewModel : ObservableObject {
     
     // delete plan
     func onDelete(offset: IndexSet) {
-        guard let transaction = offset.map { transactionCollection.transactionList[$0] }.first as? Transaction else {
-            print("not a transaction")
-            return
+        if GlobalObject.shared.user != nil {
+            if GlobalObject.shared.user!.wrappedRole == .admin {
+                guard let transaction = offset.map { transactionCollection.transactionList[$0] }.first as? Transaction else {
+                    print("not a transaction")
+                    return
+                }
+                transaction.delete = true
+                CoreDataController.controller.save()
+            }
         }
-        transaction.delete = true
-        CoreDataController.controller.save()
     }
     
     // Gerakin plan ketika edit

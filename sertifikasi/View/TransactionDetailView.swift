@@ -30,7 +30,7 @@ struct TransactionDetailView: View {
                     .foregroundColor(Color.blue)
                     .bold()
                 ){
-                    TextField("", text: $viewModel.returnedDate)
+                    TextField("Not Returned Yet", text: $viewModel.returnedDate)
                         .disabled(true)
                         .padding(.all, 7.0)
                         .foregroundColor(Color.black)
@@ -47,8 +47,12 @@ struct TransactionDetailView: View {
                     //                            .padding(.horizontal)
                 }
             }
-            Button("Return Book") {
-                viewModel.returnBook()
+            if GlobalObject.shared.user != nil {
+                if GlobalObject.shared.user!.wrappedRole == .admin {
+                    Button("Return Book") {
+                        viewModel.returnBook()
+                    }
+                }
             }
         }
         .onAppear(){

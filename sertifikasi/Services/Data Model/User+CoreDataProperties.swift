@@ -43,5 +43,17 @@ extension User {
 }
 
 extension User : Identifiable {
-
+    enum UserRole : String {
+        case member = "member"
+        case admin = "admin"
+    }
+    
+    var wrappedRole : UserRole {
+        get {
+            return UserRole(rawValue: role!)!
+        }
+        set {
+            self.role = newValue.rawValue
+        }
+    }
 }

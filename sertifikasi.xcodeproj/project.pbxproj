@@ -44,6 +44,7 @@
 		F73412C52950965D00157807 /* TransactionCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412C42950965D00157807 /* TransactionCollection.swift */; };
 		F73412C729509F7A00157807 /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412C629509F7A00157807 /* TransactionDetailView.swift */; };
 		F73412C92950A04500157807 /* TransactionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412C82950A04500157807 /* TransactionDetailViewModel.swift */; };
+		F73412CB2950BB7E00157807 /* GlobalObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412CA2950BB7E00157807 /* GlobalObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,7 @@
 		F73412C42950965D00157807 /* TransactionCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCollection.swift; sourceTree = "<group>"; };
 		F73412C629509F7A00157807 /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
 		F73412C82950A04500157807 /* TransactionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewModel.swift; sourceTree = "<group>"; };
+		F73412CA2950BB7E00157807 /* GlobalObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				F7341296294EB23300157807 /* Data Model */,
 				F7341265294EA96800157807 /* PersistenceController.swift */,
 				F7341297294EB26C00157807 /* CoreDataController.swift */,
+				F73412CA2950BB7E00157807 /* GlobalObject.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F73412C12950437400157807 /* CardTransactionView.swift in Sources */,
+				F73412CB2950BB7E00157807 /* GlobalObject.swift in Sources */,
 				F73412BD294FF13100157807 /* SubmissionPicker.swift in Sources */,
 				F73412C92950A04500157807 /* TransactionDetailViewModel.swift in Sources */,
 				F734128C294EB22C00157807 /* Book+CoreDataClass.swift in Sources */,

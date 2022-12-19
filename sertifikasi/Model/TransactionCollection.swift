@@ -12,10 +12,22 @@ struct TransactionCollection {
     var transactionList : [Transaction] = []
     
     mutating func getNewTransactions() {
-        guard let transactions = CoreDataController.controller.selectOneWhereCoreData(entityName: "Transaction", toPredicate: "delete", predicateValue: "false") as? [Transaction] else {
-            print("No Transactions detected")
+        if GlobalObject.shared.user?.wrappedRole == .admin {
+            guard let transactions = CoreDataController.controller.selectOneWhereCoreData(entityName: "Transaction", toPredicate: "delete", predicateValue: "false") as? [Transaction] else {
+                print("No Transactions detected")
+                return
+            }
+            self.transactionList = transactions
             return
         }
-        self.transactionList = transactions
+        if GlobalObject.shared.user?.wrappedRole == .member {
+            guard let transactions = CoreDataController.controller.selectMultipleWhereAndCoreData(entityName: "Transaction", toPredicate: ["delete", "user_id"], predicateValue: ["false", "\(GlobalObject.shared.userID)"]) as? [Transaction] else {
+                print("No Transactions detected")
+                return
+            }
+            self.transactionList = transactions
+            return
+        }
+        
     }
 }

@@ -130,23 +130,31 @@ struct BookDetailView: View {
             
             Spacer()
             
-            Button("Delete Book") {
-                viewModel.deleteBook()
-                self.mode.wrappedValue.dismiss()
-            }
-            Button("Rent Book") {
-                if viewModel.isEditMode == true {
-                    viewModel.editBook()
-                    viewModel.isEditMode = false
-                    return
-                } else if isAddNewBook == true {
-                    if viewModel.addNewBook() {
+            if GlobalObject.shared.user != nil {
+                if GlobalObject.shared.user!.wrappedRole == .admin {
+                    Button(viewModel.isEditMode ? "Edit Book Data" : isAddNewBook ? "Add New Book" : "Delete Book") {
+                        if viewModel.isEditMode == true {
+                            viewModel.editBook()
+                            viewModel.isEditMode = false
+                            return
+                        } else if isAddNewBook == true {
+                            if viewModel.addNewBook() {
+                                self.mode.wrappedValue.dismiss()
+                            }
+                            return
+                        }
+                        viewModel.deleteBook()
                         self.mode.wrappedValue.dismiss()
                     }
-                    return
+                } else {
+                    Button("Rent Book") {
+                        viewModel.rentBook()
+                    }
+                    .disabled(viewModel.bookStatus == .borrowed)
                 }
-                viewModel.rentBook()
             }
+            
+            
         }
         .navigationBarHidden(isAddNewBook)
         .navigationBarBackButtonHidden()
@@ -155,12 +163,22 @@ struct BookDetailView: View {
                 self.mode.wrappedValue.dismiss()
             }, label: {
                 Text("Back")
-            }), trailing:
-            Button(action: {
-                viewModel.isEditMode.toggle()
-            }, label: {
-                Text("Edit")
-            })
+            }),
+            
+            trailing:
+                Button(action: {
+                    viewModel.isEditMode.toggle()
+                }, label: {
+                    if GlobalObject.shared.user != nil {
+                        if GlobalObject.shared.user!.wrappedRole == .admin {
+                            Text("Edit")
+                        }
+                    } else {
+                        Text("")
+                    }
+                })
+            
+            
         )
         .onAppear() {
             if bookID != nil {

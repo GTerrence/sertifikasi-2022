@@ -47,5 +47,7 @@ class TransactionDetailViewModel : ObservableObject {
         book.wrappedStatus = .available
         
         CoreDataController.controller.save()
+        
+        setup(transactionID: self.transactionID)
     }
 }

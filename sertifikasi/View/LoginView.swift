@@ -21,10 +21,12 @@ struct LoginView: View {
                         Text("Name")
                         TextField("Enter Your Name", text: $viewModel.userName)
                     }
+                    .frame(width: 250)
                     HStack {
                         Text("Password")
-                        TextField("Enter Password", text: $viewModel.password)
+                        SecureField("Enter Password", text: $viewModel.password)
                     }
+                    .frame(width: 250)
                     Spacer()
                         .frame(height : 20)
                     NavigationLink(destination: HomeView(), isActive: $isHomeViewActive) {
@@ -36,9 +38,10 @@ struct LoginView: View {
                     }
                     Spacer()
                         .frame(height : 20)
-                    NavigationLink(destination: HomeView()) {
-                        Text("Enter Without Login")
-                    }
+                    
+//                    NavigationLink(destination: HomeView()) {
+//                        Text("Enter Without Login")
+//                    }
                 }
             }
 //        }

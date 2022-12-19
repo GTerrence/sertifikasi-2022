@@ -32,25 +32,40 @@ struct CollectionView: View {
                     }
                 }
             }
-            VStack {
-                Spacer()
-                HStack {
-                    Spacer()
-                    Button("+") {
-                        isAddBookViewPresented.toggle()
-                    }
-                    .fullScreenCover(isPresented: $isAddBookViewPresented) {
-                        viewModel.books.getNewestBooks()
-                    } content: {
-                        BookDetailView()
-                    }
+            if GlobalObject.shared.user != nil {
+                if GlobalObject.shared.user!.wrappedRole == .admin {
+                    VStack {
+                        Spacer()
+                        HStack {
+                            Spacer()
+                            Button(action: {
+                                isAddBookViewPresented.toggle()
+                            }, label: {
+                                ZStack {
+                                    Circle()
+                                        .frame(width: 50, height: 50)
+                                        .foregroundColor(.blue)
+                                    Image(systemName: "plus")
+                                        .frame(width: 50, height: 50)
+                                        .foregroundColor(.white)
+                                }
+                                .padding(.trailing, 10)
+                            })
+                            .fullScreenCover(isPresented: $isAddBookViewPresented) {
+                                viewModel.books.getNewestBooks()
+                            } content: {
+                                BookDetailView()
+                            }
 
-//                    .sheet(isPresented: $isAddBookViewPresented) {
-//                        BookDetailView()
-//                    }
+        //                    .sheet(isPresented: $isAddBookViewPresented) {
+        //                        BookDetailView()
+        //                    }
+                        }
+                        
+                    }
                 }
-                
             }
+            
         }
 //        .onReceive(viewModel.$books) { _ in
 //            if isThereChangeInBooks {

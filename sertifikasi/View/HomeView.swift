@@ -32,7 +32,16 @@ struct HomeView: View {
         )
         
         
-//                Button("Add dummy data") {
+//        Button("Add dummy data") {
+//            let user = User(context: CoreDataController.controller.context)
+//            user.id = UUID().uuidString
+//            user.wrappedRole = .member
+//            user.name = "Cath"
+//            user.password = "123456"
+//            user.delete = false
+//
+//            CoreDataController.controller.save()
+//        }
 //                    let books = CoreDataController.controller.selectAllCoreData(entityName: "Book") as! [Book]
 //                    let book = books.filter({$0.id == nil}).first!
 //                    book.id = UUID().uuidString
