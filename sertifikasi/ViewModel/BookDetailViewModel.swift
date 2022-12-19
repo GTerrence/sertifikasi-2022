@@ -95,4 +95,14 @@ class BookDetailViewModel : ObservableObject {
         
         return true
     }
+    
+    func deleteBook() {
+        guard let book = CoreDataController.controller.selectOneWhereCoreData(entityName: "Book", toPredicate: "id", predicateValue: self.bookID!).first as? Book else {
+            print("No book exist")
+            return
+        }
+        book.delete = true
+        
+        CoreDataController.controller.save()
+    }
 }

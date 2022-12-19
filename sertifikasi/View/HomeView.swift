@@ -12,24 +12,24 @@ struct HomeView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
     var body: some View {
-//        TabView {
-//            CollectionView()
-//                .tabItem {
-//                    Label("Collection", systemImage: "list.dash")
-//                }
-//        }
-//        .navigationBarBackButtonHidden(true)
-//        .navigationBarItems(leading:
-//            Button(action: {
-//                self.mode.wrappedValue.dismiss()
-//            }, label: {
-//                Text("Back")
-//            })
-//        )
+        TabView {
+            CollectionView()
+                .tabItem {
+                    Label("Collection", systemImage: "list.dash")
+                }
+        }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading:
+            Button(action: {
+                self.mode.wrappedValue.dismiss()
+            }, label: {
+                Text("Back")
+            })
+        )
         
         
-                Button("Add dummy data") {
-                    let books = CoreDataController.controller.selectAllCoreData(entityName: "Book") as! [Book]
+//                Button("Add dummy data") {
+//                    let books = CoreDataController.controller.selectAllCoreData(entityName: "Book") as! [Book]
 //                    let book = books.filter({$0.id == nil}).first!
 //                    book.id = UUID().uuidString
 //                    book.title = "The Immortals"
@@ -80,8 +80,8 @@ struct HomeView: View {
 //                    detail.book_id = bookID
 //                    detail.delete = false
         
-                    CoreDataController.controller.save()
-                }
+//                    CoreDataController.controller.save()
+//                }
     }
 }
 

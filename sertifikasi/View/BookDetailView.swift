@@ -130,6 +130,10 @@ struct BookDetailView: View {
             
             Spacer()
             
+            Button("Delete Book") {
+                viewModel.deleteBook()
+                self.mode.wrappedValue.dismiss()
+            }
             Button("Rent Book") {
                 if viewModel.isEditMode == true {
                     viewModel.editBook()
