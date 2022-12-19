@@ -40,6 +40,10 @@
 		F73412BD294FF13100157807 /* SubmissionPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412BC294FF13100157807 /* SubmissionPicker.swift */; };
 		F73412BF295042C500157807 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412BE295042C500157807 /* TransactionView.swift */; };
 		F73412C12950437400157807 /* CardTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412C02950437400157807 /* CardTransactionView.swift */; };
+		F73412C32950963E00157807 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412C22950963E00157807 /* TransactionViewModel.swift */; };
+		F73412C52950965D00157807 /* TransactionCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412C42950965D00157807 /* TransactionCollection.swift */; };
+		F73412C729509F7A00157807 /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412C629509F7A00157807 /* TransactionDetailView.swift */; };
+		F73412C92950A04500157807 /* TransactionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412C82950A04500157807 /* TransactionDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +81,10 @@
 		F73412BC294FF13100157807 /* SubmissionPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionPicker.swift; sourceTree = "<group>"; };
 		F73412BE295042C500157807 /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
 		F73412C02950437400157807 /* CardTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTransactionView.swift; sourceTree = "<group>"; };
+		F73412C22950963E00157807 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		F73412C42950965D00157807 /* TransactionCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCollection.swift; sourceTree = "<group>"; };
+		F73412C629509F7A00157807 /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
+		F73412C82950A04500157807 /* TransactionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +185,7 @@
 				F73412B6294F167100157807 /* CollectionView.swift */,
 				F73412B8294F1DED00157807 /* BookDetailView.swift */,
 				F73412BE295042C500157807 /* TransactionView.swift */,
+				F73412C629509F7A00157807 /* TransactionDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,6 +196,8 @@
 				F73412A2294EC00C00157807 /* LoginViewModel.swift */,
 				F73412AF294ED31000157807 /* CollectionViewModel.swift */,
 				F73412BA294F1F2500157807 /* BookDetailViewModel.swift */,
+				F73412C22950963E00157807 /* TransactionViewModel.swift */,
+				F73412C82950A04500157807 /* TransactionDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -206,6 +217,7 @@
 			children = (
 				F73412B2294ED3EF00157807 /* BookCollection.swift */,
 				F73412B4294F0F6400157807 /* ViewState.swift */,
+				F73412C42950965D00157807 /* TransactionCollection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,14 +294,18 @@
 			files = (
 				F73412C12950437400157807 /* CardTransactionView.swift in Sources */,
 				F73412BD294FF13100157807 /* SubmissionPicker.swift in Sources */,
+				F73412C92950A04500157807 /* TransactionDetailViewModel.swift in Sources */,
 				F734128C294EB22C00157807 /* Book+CoreDataClass.swift in Sources */,
+				F73412C52950965D00157807 /* TransactionCollection.swift in Sources */,
 				F734128E294EB22C00157807 /* Member+CoreDataClass.swift in Sources */,
 				F7341298294EB26C00157807 /* CoreDataController.swift in Sources */,
 				F73412A5294EC38A00157807 /* UIExtension.swift in Sources */,
 				F7341293294EB22C00157807 /* User+CoreDataProperties.swift in Sources */,
+				F73412C32950963E00157807 /* TransactionViewModel.swift in Sources */,
 				F734125A294EA04800157807 /* ContentView.swift in Sources */,
 				F734129E294EBE5700157807 /* HomeView.swift in Sources */,
 				F734128D294EB22C00157807 /* Book+CoreDataProperties.swift in Sources */,
+				F73412C729509F7A00157807 /* TransactionDetailView.swift in Sources */,
 				F73412A7294EC49D00157807 /* Background.swift in Sources */,
 				F734126D294EAA3000157807 /* LibraryDataModel.xcdatamodeld in Sources */,
 				F73412B5294F0F6400157807 /* ViewState.swift in Sources */,

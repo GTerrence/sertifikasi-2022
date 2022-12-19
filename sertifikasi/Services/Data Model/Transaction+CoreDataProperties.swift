@@ -46,5 +46,38 @@ extension Transaction {
 }
 
 extension Transaction : Identifiable {
-
+    var wrappedBookID : String {
+        return book_id ?? ""
+    }
+    
+    var wrappedTransactionDate : Date {
+        return transaction_date ?? Date()
+    }
+    
+    
+    var wrappedStartDate : String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        
+        return formatter.string(from: transaction_date ?? Date())
+    }
+    
+    enum TransactionStatus : String {
+        case onGoing = "On Going"
+        case ended = "Ended"
+        case overdue = "Overdue"
+    }
+    
+    var transactionStatus : TransactionStatus {
+        let diffSeconds = wrappedTransactionDate.timeIntervalSinceReferenceDate - Date().timeIntervalSinceReferenceDate
+        let diffDays = Int(diffSeconds / (60.0 * 60.0 * 24.0))
+        
+        if transaction_finished != nil {
+            return .ended
+        }
+        if diffDays <= 7 {
+            return .onGoing
+        }
+        return .overdue
+    }
 }
