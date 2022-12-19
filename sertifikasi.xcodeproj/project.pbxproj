@@ -38,6 +38,8 @@
 		F73412B9294F1DED00157807 /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412B8294F1DED00157807 /* BookDetailView.swift */; };
 		F73412BB294F1F2500157807 /* BookDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412BA294F1F2500157807 /* BookDetailViewModel.swift */; };
 		F73412BD294FF13100157807 /* SubmissionPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412BC294FF13100157807 /* SubmissionPicker.swift */; };
+		F73412BF295042C500157807 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412BE295042C500157807 /* TransactionView.swift */; };
+		F73412C12950437400157807 /* CardTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412C02950437400157807 /* CardTransactionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +75,8 @@
 		F73412B8294F1DED00157807 /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
 		F73412BA294F1F2500157807 /* BookDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewModel.swift; sourceTree = "<group>"; };
 		F73412BC294FF13100157807 /* SubmissionPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionPicker.swift; sourceTree = "<group>"; };
+		F73412BE295042C500157807 /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+		F73412C02950437400157807 /* CardTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTransactionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +176,7 @@
 				F73412A6294EC49D00157807 /* Background.swift */,
 				F73412B6294F167100157807 /* CollectionView.swift */,
 				F73412B8294F1DED00157807 /* BookDetailView.swift */,
+				F73412BE295042C500157807 /* TransactionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 			children = (
 				F73412AD294ED0D400157807 /* BookCard.swift */,
 				F73412BC294FF13100157807 /* SubmissionPicker.swift */,
+				F73412C02950437400157807 /* CardTransactionView.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -274,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F73412C12950437400157807 /* CardTransactionView.swift in Sources */,
 				F73412BD294FF13100157807 /* SubmissionPicker.swift in Sources */,
 				F734128C294EB22C00157807 /* Book+CoreDataClass.swift in Sources */,
 				F734128E294EB22C00157807 /* Member+CoreDataClass.swift in Sources */,
@@ -291,6 +298,7 @@
 				F73412B0294ED31000157807 /* CollectionViewModel.swift in Sources */,
 				F73412BB294F1F2500157807 /* BookDetailViewModel.swift in Sources */,
 				F7341295294EB22C00157807 /* Transaction+CoreDataProperties.swift in Sources */,
+				F73412BF295042C500157807 /* TransactionView.swift in Sources */,
 				F73412B3294ED3EF00157807 /* BookCollection.swift in Sources */,
 				F734129B294EBCAD00157807 /* BookStatus.swift in Sources */,
 				F73412A1294EBF4700157807 /* LoginView.swift in Sources */,

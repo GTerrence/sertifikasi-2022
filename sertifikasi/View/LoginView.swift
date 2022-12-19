@@ -12,33 +12,36 @@ struct LoginView: View {
     @ObservedObject var viewModel = LoginViewModel()
     @State var isHomeViewActive : Bool = false
     
+    
     var body: some View {
-        NavigationView{
-            VStack {
-                HStack {
-                    Text("Name")
-                    TextField("Enter Your Name", text: $viewModel.userName)
-                }
-                HStack {
-                    Text("Password")
-                    TextField("Enter Password", text: $viewModel.password)
-                }
-                Spacer()
-                    .frame(height : 20)
-                NavigationLink(destination: HomeView(), isActive: $isHomeViewActive) {
-                    Button("Login") {
-                        if viewModel.login() {
-                            isHomeViewActive = true
+//        Background {
+            NavigationView{
+                VStack {
+                    HStack {
+                        Text("Name")
+                        TextField("Enter Your Name", text: $viewModel.userName)
+                    }
+                    HStack {
+                        Text("Password")
+                        TextField("Enter Password", text: $viewModel.password)
+                    }
+                    Spacer()
+                        .frame(height : 20)
+                    NavigationLink(destination: HomeView(), isActive: $isHomeViewActive) {
+                        Button("Login") {
+                            if viewModel.login() {
+                                isHomeViewActive = true
+                            }
                         }
                     }
-                }
-                Spacer()
-                    .frame(height : 20)
-                NavigationLink(destination: HomeView()) {
-                    Text("Enter Without Login")
+                    Spacer()
+                        .frame(height : 20)
+                    NavigationLink(destination: HomeView()) {
+                        Text("Enter Without Login")
+                    }
                 }
             }
-        }
+//        }
     }
 }
 

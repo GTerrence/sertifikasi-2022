@@ -19,5 +19,8 @@ struct Background<Content: View>: View {
         Color.white
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         .overlay(content)
+//        .onTapGesture {
+//            UIApplication.shared.endEditing()
+//        }
     }
 }

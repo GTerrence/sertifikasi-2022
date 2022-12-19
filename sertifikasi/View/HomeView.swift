@@ -17,6 +17,10 @@ struct HomeView: View {
                 .tabItem {
                     Label("Collection", systemImage: "list.dash")
                 }
+            TransactionView()
+                .tabItem {
+                    Label("Transaction", systemImage: "list.dash")
+                }
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading:

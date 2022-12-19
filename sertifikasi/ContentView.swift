@@ -9,12 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Background {
+//        Background {
             LoginView()
-        }
-        .onTapGesture {
-            UIApplication.shared.endEditing()
-        }
+            //
+//            HomeView()
+//        }
+        
     }
 }
 
