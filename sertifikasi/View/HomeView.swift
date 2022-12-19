@@ -25,9 +25,11 @@ struct HomeView: View {
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading:
             Button(action: {
+                GlobalObject.shared.userID = ""
+                GlobalObject.shared.user = nil
                 self.mode.wrappedValue.dismiss()
             }, label: {
-                Text("Back")
+                Text("Logout")
             })
         )
         
