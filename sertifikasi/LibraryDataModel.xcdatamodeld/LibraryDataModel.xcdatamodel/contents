@@ -20,11 +20,11 @@
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="member" inverseEntity="Transaction"/>
     </entity>
     <entity name="Transaction" representedClassName="Transaction" syncable="YES">
+        <attribute name="book_id" optional="YES" attributeType="String"/>
         <attribute name="delete" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="String"/>
-        <attribute name="is_finished" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="member_id" optional="YES" attributeType="String"/>
         <attribute name="transaction_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="transaction_finished" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="user_id" optional="YES" attributeType="String"/>
         <relationship name="books" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TransactionDetail" inverseName="transaction" inverseEntity="TransactionDetail"/>
         <relationship name="member" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="transactions" inverseEntity="Member"/>

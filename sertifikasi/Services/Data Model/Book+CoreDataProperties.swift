@@ -56,4 +56,12 @@ extension Book : Identifiable {
     var wrappedTitle : String {
         return title ?? "No Title Available"
     }
+    
+    var wrappedAuthor : String {
+        return author ?? "No Author Available"
+    }
+    
+    var wrappedPublisher : String {
+        return publisher ?? "No Publisher Recorded"
+    }
 }

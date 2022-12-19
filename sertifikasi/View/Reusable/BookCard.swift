@@ -9,10 +9,11 @@ import SwiftUI
 
 struct BookCard: View {
     
+    var bookID : String
     var title : String
     
     var body: some View {
-        NavigationLink(destination: BookDetailView()) {
+        NavigationLink(destination: BookDetailView(bookID:bookID)) {
             ZStack{
                 Rectangle()
                     .foregroundColor(.clear)
@@ -35,6 +36,6 @@ struct BookCard: View {
 
 struct BookCard_Previews: PreviewProvider {
     static var previews: some View {
-        BookCard(title: "Judul")
+        BookCard(bookID: UUID().uuidString, title: "Judul")
     }
 }
