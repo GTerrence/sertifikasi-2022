@@ -36,7 +36,7 @@ struct TransactionDetailView: View {
                         .foregroundColor(Color.black)
                     //                            .padding(.horizontal)
                 }
-                Section (header: Text("Publisher")
+                Section (header: Text("Book Title")
                     .foregroundColor(Color.blue)
                     .bold()
                 ){
@@ -46,9 +46,23 @@ struct TransactionDetailView: View {
                         .foregroundColor(Color.black)
                     //                            .padding(.horizontal)
                 }
+                
+                if GlobalObject.shared.user?.wrappedRole == .admin {
+                    Section (header: Text("Borrower")
+                        .foregroundColor(Color.blue)
+                        .bold()
+                    ){
+                        TextField("Borrower", text: $viewModel.borrower)
+                            .disabled(true)
+                            .padding(.all, 7.0)
+                            .foregroundColor(Color.black)
+                        //                            .padding(.horizontal)
+                    }
+                }
+                
             }
             if GlobalObject.shared.user != nil {
-                if GlobalObject.shared.user!.wrappedRole == .admin {
+                if GlobalObject.shared.user!.wrappedRole == .member {
                     Button("Return Book") {
                         viewModel.returnBook()
                     }

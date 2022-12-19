@@ -11,6 +11,7 @@ class TransactionDetailViewModel : ObservableObject {
     @Published var bookTitle = ""
     @Published var borrowDate = ""
     @Published var returnedDate = ""
+    @Published var borrower = ""
     
     private var formatter = DateFormatter()
     private var transactionID : String = ""
@@ -29,6 +30,12 @@ class TransactionDetailViewModel : ObservableObject {
         
         if let book = CoreDataController.controller.selectOneWhereCoreData(entityName: "Book", toPredicate: "id", predicateValue: "\(transaction.wrappedBookID)").first as? Book {
             bookTitle = book.wrappedTitle
+        }
+        
+        if GlobalObject.shared.user?.wrappedRole == .admin {
+            if let user = CoreDataController.controller.selectOneWhereCoreData(entityName: "User", toPredicate: "id", predicateValue: transaction.user_id ?? "").first as? User {
+                borrower = user.name ?? "Unknown Borrower"
+            }
         }
     }
     
