@@ -11,6 +11,7 @@ struct BookCard: View {
     
     var bookID : String
     var title : String
+    var image : UIImage
     
     var body: some View {
         NavigationLink(destination: BookDetailView(bookID:bookID)) {
@@ -19,9 +20,10 @@ struct BookCard: View {
                     .foregroundColor(.clear)
                     .frame(height: 200)
                 VStack{
-                    Image(systemName: "chevron.right")
+                    Image(uiImage: image)
+                        .resizable()
                         .foregroundColor(Color.gray)
-                        .frame(height : 150)
+                        .frame(width: UIScreen.main.bounds.width / 2 - 20, height: 150)
                     Text(title)
                 }
             }
@@ -36,6 +38,6 @@ struct BookCard: View {
 
 struct BookCard_Previews: PreviewProvider {
     static var previews: some View {
-        BookCard(bookID: UUID().uuidString, title: "Judul")
+        BookCard(bookID: UUID().uuidString, title: "Judul", image: UIImage())
     }
 }

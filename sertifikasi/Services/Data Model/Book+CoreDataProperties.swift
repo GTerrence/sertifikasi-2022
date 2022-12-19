@@ -22,6 +22,7 @@ extension Book {
     @NSManaged public var publisher: String?
     @NSManaged public var status: Int16
     @NSManaged public var title: String?
+    @NSManaged public var cover_image: Data?
     @NSManaged public var transactions: NSSet?
 
 }

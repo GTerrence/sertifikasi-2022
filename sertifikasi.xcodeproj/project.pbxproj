@@ -37,6 +37,7 @@
 		F73412B7294F167100157807 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412B6294F167100157807 /* CollectionView.swift */; };
 		F73412B9294F1DED00157807 /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412B8294F1DED00157807 /* BookDetailView.swift */; };
 		F73412BB294F1F2500157807 /* BookDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412BA294F1F2500157807 /* BookDetailViewModel.swift */; };
+		F73412BD294FF13100157807 /* SubmissionPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73412BC294FF13100157807 /* SubmissionPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		F73412B6294F167100157807 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		F73412B8294F1DED00157807 /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
 		F73412BA294F1F2500157807 /* BookDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewModel.swift; sourceTree = "<group>"; };
+		F73412BC294FF13100157807 /* SubmissionPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				F73412AD294ED0D400157807 /* BookCard.swift */,
+				F73412BC294FF13100157807 /* SubmissionPicker.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F73412BD294FF13100157807 /* SubmissionPicker.swift in Sources */,
 				F734128C294EB22C00157807 /* Book+CoreDataClass.swift in Sources */,
 				F734128E294EB22C00157807 /* Member+CoreDataClass.swift in Sources */,
 				F7341298294EB26C00157807 /* CoreDataController.swift in Sources */,

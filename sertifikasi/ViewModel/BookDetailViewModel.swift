@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class BookDetailViewModel : ObservableObject {
     
@@ -14,6 +15,7 @@ class BookDetailViewModel : ObservableObject {
     @Published var publisher : String = ""
     
     @Published var bookStatus : BookStatus = .available
+    @Published var imageSelected = UIImage(systemName: "plus")!
     
     @Published var isEditMode = false
     
@@ -31,6 +33,9 @@ class BookDetailViewModel : ObservableObject {
         publisher = book.wrappedPublisher
         
         bookStatus = book.wrappedStatus
+        if let imageData = book.cover_image {
+            imageSelected = UIImage(data: imageData) ?? UIImage(systemName: "plus")!
+        }
     }
     
     func rentBook() {
@@ -61,5 +66,33 @@ class BookDetailViewModel : ObservableObject {
         book.author = author
         book.publisher = publisher
         book.wrappedStatus = bookStatus
+        if imageSelected != UIImage(systemName: "plus") {
+            book.cover_image = imageSelected.pngData()
+        }
+        
+        CoreDataController.controller.save()
+    }
+    
+    func addNewBook() -> Bool {
+        
+        if bookTitle == "" || author == "" || publisher == "" || imageSelected == UIImage(systemName: "plus") {
+            print("Failed to input data")
+            return false
+        }
+        let book = Book(context: CoreDataController.controller.context)
+        
+        
+        
+        book.id = UUID().uuidString
+        book.title = bookTitle
+        book.author = author
+        book.publisher = publisher
+        book.wrappedStatus = bookStatus
+        book.cover_image = imageSelected.pngData()
+        book.delete = false
+        
+        CoreDataController.controller.save()
+        
+        return true
     }
 }

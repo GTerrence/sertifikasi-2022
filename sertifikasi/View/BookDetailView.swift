@@ -13,18 +13,70 @@ struct BookDetailView: View {
     
     @StateObject var viewModel = BookDetailViewModel()
     
+    @State var isAddNewBook = false
     
+    //var for submission image picker
+    @State var changeSubmissionImage = false
+    @State var openCameraSheet = false
     var bookID : String?
     
     var body: some View {
         VStack {
+            if isAddNewBook {
+                HStack{
+                    Button("cancel") {
+                        self.mode.wrappedValue.dismiss()
+                    }
+                    .padding(.leading, 5)
+                    Spacer()
+                }
+            }
+            
+            if isAddNewBook || viewModel.isEditMode {
+                Button(action: {
+                    //Action
+                    changeSubmissionImage = true
+                    openCameraSheet = true
+                }, label: {
+                    ZStack {
+                        
+                        Image(uiImage: viewModel.imageSelected)
+                            .resizable()
+                            .frame(width: 125, height: 200, alignment: .center)
+                            .foregroundColor(.red)
+                            .padding()
+                        
+                        Rectangle()
+                            .foregroundColor(Color.black.opacity(0.6))
+                            .frame(width: 125, height: 200, alignment: .center)
+                            
+                        
+                        Text("Change Image")
+                            .font(.caption)
+                        
+                        
+                    }
+                })//Button
+                .sheet(isPresented: $openCameraSheet) {
+                    SubmissionPicker(selectedImage: $viewModel.imageSelected, sourceType: .photoLibrary)
+                }
+            } else {
+                ZStack {
+                    Image(uiImage: viewModel.imageSelected)
+                        .resizable()
+                        .frame(width: 125, height: 200, alignment: .center)
+                        .foregroundColor(.red)
+                        .padding()
+                }
+            }
+            
             Form {
                 Section (header: Text("Title")
                     .foregroundColor(Color.blue)
                     .bold()
                 ){
                     TextField("Enter Title", text: $viewModel.bookTitle)
-                        .disabled(!viewModel.isEditMode)
+                        .disabled(!viewModel.isEditMode && !isAddNewBook)
                         .padding(.all, 7.0)
                         .foregroundColor(Color.black)
                     //                            .padding(.horizontal)
@@ -35,7 +87,7 @@ struct BookDetailView: View {
                     .bold()
                 ){
                     TextField("Enter Author", text: $viewModel.author)
-                        .disabled(!viewModel.isEditMode)
+                        .disabled(!viewModel.isEditMode && !isAddNewBook)
                         .padding(.all, 7.0)
                         .foregroundColor(Color.black)
                     //                            .padding(.horizontal)
@@ -45,7 +97,7 @@ struct BookDetailView: View {
                     .bold()
                 ){
                     TextField("Enter Publisher", text: $viewModel.publisher)
-                        .disabled(!viewModel.isEditMode)
+                        .disabled(!viewModel.isEditMode && !isAddNewBook)
                         .padding(.all, 7.0)
                         .foregroundColor(Color.black)
                     //                            .padding(.horizontal)
@@ -72,7 +124,7 @@ struct BookDetailView: View {
                             }//forEachContent
                         }//pickerContent
                     )//Picker
-                    .disabled(!viewModel.isEditMode)
+                    .disabled(!viewModel.isEditMode && !isAddNewBook)
                 }
             }
             
@@ -83,10 +135,16 @@ struct BookDetailView: View {
                     viewModel.editBook()
                     viewModel.isEditMode = false
                     return
+                } else if isAddNewBook == true {
+                    if viewModel.addNewBook() {
+                        self.mode.wrappedValue.dismiss()
+                    }
+                    return
                 }
                 viewModel.rentBook()
             }
         }
+        .navigationBarHidden(isAddNewBook)
         .navigationBarBackButtonHidden()
         .navigationBarItems(leading:
             Button(action: {
@@ -103,7 +161,9 @@ struct BookDetailView: View {
         .onAppear() {
             if bookID != nil {
                 viewModel.setup(bookID: bookID!)
+                return
             }
+            self.isAddNewBook = true
         }
         
     }
