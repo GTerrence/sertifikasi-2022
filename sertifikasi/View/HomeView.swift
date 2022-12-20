@@ -35,13 +35,34 @@ struct HomeView: View {
         
         
 //        Button("Add dummy data") {
-//            let user = User(context: CoreDataController.controller.context)
-//            user.id = UUID().uuidString
-//            user.wrappedRole = .member
-//            user.name = "Cath"
-//            user.password = "123456"
-//            user.delete = false
-//
+////            let user = User(context: CoreDataController.controller.context)
+////            user.id = UUID().uuidString
+////            user.wrappedRole = .member
+////            user.name = "Cath"
+////            user.password = "123456"
+////            user.delete = false
+////
+//            
+//            guard let user = CoreDataController.controller.selectOneWhereCoreData(entityName: "User", toPredicate: "name", predicateValue: "Cath").first as? User else {
+//                print("No user")
+//                return
+//            }
+//            
+//            guard let book = CoreDataController.controller.selectOneWhereCoreData(entityName: "Book", toPredicate: "title", predicateValue: "Harry Potter").first as? Book else {
+//                print("No book")
+//                return
+//            }
+//            
+//            let transaction = Transaction(context: CoreDataController.controller.context)
+//            transaction.id = UUID().uuidString
+//            
+//            transaction.user_id = user.id
+//            transaction.book_id = book.id
+//            
+//            transaction.transaction_date = Calendar.current.date(byAdding: .weekOfYear, value: -2, to: Date())
+//            transaction.delete = false
+//            
+//            book.wrappedStatus = .borrowed
 //            CoreDataController.controller.save()
 //        }
 //                    let books = CoreDataController.controller.selectAllCoreData(entityName: "Book") as! [Book]

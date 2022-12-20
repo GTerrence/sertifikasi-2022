@@ -75,7 +75,7 @@ extension Transaction : Identifiable {
         if transaction_finished != nil {
             return .ended
         }
-        if diffDays <= 7 {
+        if diffDays >= -7 {
             return .onGoing
         }
         return .overdue
